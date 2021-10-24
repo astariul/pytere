@@ -8,8 +8,11 @@ with open("README.md", "r") as fh:
 reqs = []
 
 extras_require = {
-    "tests": ["pytest==6.2.*", "pytest-cov==3.0.*"]
+    "tests": ["pytest==6.2.*", "pytest-cov==3.0.*"],
+    "hooks": ["pre-commit==2.15.*"],
 }
+extras_require["all"] = sum(extras_require.values(), [])
+extras_require["dev"] = extras_require["tests"] + extras_require["hooks"]
 
 setuptools.setup(
     name="pytere",

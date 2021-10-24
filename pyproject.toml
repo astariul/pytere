@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+addopts = "-W ignore::DeprecationWarning --cov=pytere --no-cov-on-fail --cov-fail-under=80"
+testpaths = [
+    "tests",
+]

@@ -3,3 +3,18 @@ addopts = "-W ignore::DeprecationWarning --cov=pytere --no-cov-on-fail --cov-fai
 testpaths = [
     "tests",
 ]
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+ensure_newline_before_comments = true
+known_first_party = "pytere"
+line_length = 119
+lines_after_imports = 2
+profile = "black"
+
+[tool.flake8]
+max-line-length = 119
+max-complexity = 10
+per-file-ignores = "__init__.py:F401"

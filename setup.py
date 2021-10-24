@@ -7,7 +7,9 @@ with open("README.md", "r") as fh:
 
 reqs = []
 
-extras_require = {}
+extras_require = {
+    "tests": ["pytest==6.2.*"]
+}
 
 setuptools.setup(
     name="pytere",

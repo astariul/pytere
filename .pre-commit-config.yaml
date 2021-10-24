@@ -14,3 +14,9 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
+      - id: coverage
+        name: coverage
+        entry: coverage-badge -f -o .github/badges/coverage.svg
+        language: system
+        pass_filenames: false
+        always_run: true

@@ -1,4 +1,5 @@
 import pytest
+
 from pytere import is_odd
 
 

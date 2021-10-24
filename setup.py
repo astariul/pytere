@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 reqs = []
 
 extras_require = {
-    "tests": ["pytest==6.2.*"]
+    "tests": ["pytest==6.2.*", "pytest-cov==3.0.*"]
 }
 
 setuptools.setup(

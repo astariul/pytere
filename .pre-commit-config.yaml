@@ -2,21 +2,32 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
-    -   id: check-added-large-files
+      - id: trailing-whitespace
+        exclude: "coverage.svg$"
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/pycqa/isort
+    rev: "5.9.3"
+    hooks:
+      - id: isort
+        name: isort (python)
+  - repo: https://github.com/psf/black
+    rev: "21.9b0"
+    hooks:
+    - id: black
+      language_version: python3
+  - repo: https://github.com/pycqa/flake8
+    rev: "3.8.3"
+    hooks:
+      - id: flake8
+        entry: pflake8
+        additional_dependencies: [pyproject-flake8]
   - repo: local
     hooks:
       - id: pytest
         name: pytest
         entry: pytest
-        language: system
-        pass_filenames: false
-        always_run: true
-      - id: coverage
-        name: coverage
-        entry: coverage-badge -f -o .github/badges/coverage.svg
         language: system
         pass_filenames: false
         always_run: true

@@ -1,6 +1,5 @@
-import os
-
 import setuptools
+
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -8,11 +7,12 @@ with open("README.md", "r") as fh:
 reqs = []
 
 extras_require = {
-    "tests": ["pytest==6.2.*", "pytest-cov==3.0.*"],
-    "hooks": ["pre-commit==2.15.*"],
+    "test": ["pytest==6.2.*", "pytest-cov==3.0.*"],
+    "hook": ["pre-commit==2.15.*"],
+    "lint": ["isort==5.9.*", "black==21.*", "pyproject-flake8==0.0.*"],
 }
 extras_require["all"] = sum(extras_require.values(), [])
-extras_require["dev"] = extras_require["tests"] + extras_require["hooks"]
+extras_require["dev"] = extras_require["test"] + extras_require["hook"] + extras_require["lint"]
 
 setuptools.setup(
     name="pytere",

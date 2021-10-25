@@ -1,7 +1,7 @@
 # Pytere
 
 <p align="center">
-    <a href="https://github.com/astariul/pytere/actions"><img src=".github/badges/coverage.svg" alt="Coverage status" />
+    <a href="https://github.com/astariul/pytere/actions"><img src=".github/badges/coverage.svg" alt="Coverage status" /></a>
 </p>
 
 **⚠️ Work In Progress !**

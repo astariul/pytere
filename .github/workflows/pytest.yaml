@@ -30,6 +30,11 @@ jobs:
       run: python -m pytest --cov-report=html:./tests/coverage_report
     - name: Coverage badge update
       run: coverage-badge -o .github/badges/coverage.svg -f
+    - name: Read the coverage report
+      run: |
+        echo 'HTML_COVERAGE_REPORT<<EOF' >> $GITHUB_ENV
+        cat ./tests/coverage_report/index.html >> $GITHUB_ENV
+        echo 'EOF' >> $GITHUB_ENV
     - name: Comment coverage
       uses: actions/github-script@v5
       with:
@@ -38,7 +43,7 @@ jobs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: '<a href="https://github.com/astariul/pytere/actions"><img src=".github/badges/coverage.svg" alt="Coverage status" /></a>'
+            body: '${{ env.HTML_COVERAGE_REPORT }}'
           })
     - uses: stefanzweifel/git-auto-commit-action@v4
       if: github.event_name == 'pull_request'   # Only on PR

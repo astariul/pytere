@@ -31,14 +31,15 @@ jobs:
     - name: Coverage badge update
       run: coverage-badge -o .github/badges/coverage.svg -f
     - name: Comment coverage
-      uses: actions/github-script@0.3.0
-      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v5
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
-          const { body } = `cat ./tests/coverage_report/index.html`
-          github.issues.createComment({ issue_number, owner, repo, body });
+          await github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '<a href="https://github.com/astariul/pytere/actions"><img src=".github/badges/coverage.svg" alt="Coverage status" /></a>'
+          })
     - uses: stefanzweifel/git-auto-commit-action@v4
       if: github.event_name == 'pull_request'   # Only on PR
       with:

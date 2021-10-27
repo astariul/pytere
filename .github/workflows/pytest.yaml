@@ -33,7 +33,7 @@ jobs:
         coverage-badge -o .github/badges/coverage.svg -f
         curr_cov=$(grep -Po '\d+%' .github/badges/coverage.svg | tail -1 | sed 's/.$//')
 
-        if [[ "$prev_cov" != "$prev_cov" ]]
+        if [[ "$prev_cov" != "$curr_cov" ]]
         then
           echo "Coverage badge is not up-to-date ! Please run the tests (`python -m pytest`) and then re-create the badge with `coverage-badge -o .github/badges/coverage.svg -f`"
           exit 1

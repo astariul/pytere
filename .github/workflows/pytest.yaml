@@ -30,21 +30,6 @@ jobs:
       run: python -m pytest --cov-report=html:./tests/coverage_report
     - name: Coverage badge update
       run: coverage-badge -o .github/badges/coverage.svg -f
-    - name: Read the coverage report
-      run: |
-        echo 'HTML_COVERAGE_REPORT<<EOF' >> $GITHUB_ENV
-        tr -d '\r\n' < ./tests/coverage_report/index.html >> $GITHUB_ENV
-        echo 'EOF' >> $GITHUB_ENV
-    - name: Comment coverage
-      uses: actions/github-script@v5
-      with:
-        script: |
-          await github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: '${{ env.HTML_COVERAGE_REPORT }}'
-          })
     - uses: stefanzweifel/git-auto-commit-action@v4
       if: github.event_name == 'pull_request'   # Only on PR
       with:

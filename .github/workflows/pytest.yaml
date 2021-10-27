@@ -22,15 +22,19 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -e .[test]
-        pip install coverage-badge==1.0.*
       env:
         GH_PAT: ${{ secrets.AUTH_TOKEN }}
     - name: Test with pytest
       timeout-minutes: 5
-      run: python -m pytest --cov-report=html:./tests/coverage_report
-    - name: Coverage badge update
-      run: coverage-badge -o .github/badges/coverage.svg -f
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      if: github.event_name == 'pull_request'   # Only on PR
-      with:
-        commit_message: 🤖 Update coverage badge & coverage report
+      run: python -m pytest
+    - name: Check coverage updated
+      run: |
+        prev_cov=$(grep -Po '\d+%' .github/badges/coverage.svg | tail -1 | sed 's/.$//')
+        coverage-badge -o .github/badges/coverage.svg -f
+        curr_cov=$(grep -Po '\d+%' .github/badges/coverage.svg | tail -1 | sed 's/.$//')
+
+        if [[ "$prev_cov" != "$prev_cov" ]]
+        then
+          echo "Coverage badge is not up-to-date ! Please run the tests (`python -m pytest`) and then re-create the badge with `coverage-badge -o .github/badges/coverage.svg -f`"
+          exit 1
+        fi

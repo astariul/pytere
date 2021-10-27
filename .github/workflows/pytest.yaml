@@ -35,6 +35,6 @@ jobs:
 
         if [[ "$prev_cov" != "$curr_cov" ]]
         then
-          echo "Coverage badge is not up-to-date ! Please run the tests (`python -m pytest`) and then re-create the badge with `coverage-badge -o .github/badges/coverage.svg -f`"
+          echo "Coverage badge is not up-to-date ! Please run the tests ('python -m pytest') and then re-create the badge with 'coverage-badge -o .github/badges/coverage.svg -f'"
           exit 1
         fi

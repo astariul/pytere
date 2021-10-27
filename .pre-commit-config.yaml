@@ -5,6 +5,7 @@ repos:
       - id: trailing-whitespace
         exclude: "coverage.svg$"
       - id: end-of-file-fixer
+        exclude: "coverage_report/.*"
       - id: check-yaml
       - id: check-added-large-files
   - repo: https://github.com/pycqa/isort

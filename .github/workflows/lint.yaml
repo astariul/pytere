@@ -1,0 +1,22 @@
+name: lint
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Check format with isort
+        run: |
+          pip install isort
+          isort --check-only .
+      - name: Check format with black
+        run: |
+          pip install black
+          black --check .
+      - name: Check format with flake8
+        run: |
+          pip install pyproject-flake8
+          pflake8 .

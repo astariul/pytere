@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 reqs = []
 
 extras_require = {
-    "test": ["pytest==6.2.*", "pytest-cov==3.0.*"],
+    "test": ["pytest==6.2.*", "pytest-cov==3.0.*", "coverage-badge==1.0.*"],
     "hook": ["pre-commit==2.15.*"],
     "lint": ["isort==5.9.*", "black==21.*", "pyproject-flake8==0.0.*"],
 }

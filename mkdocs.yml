@@ -1,0 +1,54 @@
+site_name: PyTeRe
+repo_url: "https://github.com/astariul/pytere"
+repo_name: "astariul/pytere"
+
+theme:
+  name: material
+  logo: "assets/flame.svg"
+  favicon: "assets/flame.svg"
+  features:
+    - navigation.sections
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Welcome: "index.md"
+  - Code reference:
+    - "code_ref.md"
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          rendering:
+            show_root_heading: True
+            show_root_full_path: False
+            members_order: source
+
+extra:
+  generator: false
+
+extra_css:
+  - css/mkdocstrings.css

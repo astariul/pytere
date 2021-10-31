@@ -1,0 +1,30 @@
+name: 🌟 Feature request
+description: Ask for a new feature
+title: "🌟 "
+labels: ["feature", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in the project !
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the feature proposed.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Describe the motivation for this feature request. Is this feature request related to a problem ? For example "I'm always frustrated when [...]" ?
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Is there anyway you can contribute ? Can you submit a PR for this feature ?
+    validations:
+      required: true

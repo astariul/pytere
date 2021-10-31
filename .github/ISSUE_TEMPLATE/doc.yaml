@@ -7,18 +7,11 @@ body:
     attributes:
       value: |
         Thanks for reading the documentation !
-  - type: textarea
+  - type: input
     id: page
     attributes:
       label: Page
       description: Link the page of the doc you would like to modify.
-  - type: textarea
-    id: changes
-    attributes:
-      label: Changes
-      description: Describe what you would change in this page and how you would improve it.
-    validations:
-      required: true
   - type: dropdown
     id: reason
     attributes:
@@ -29,3 +22,10 @@ body:
         - Additional details are needed (examples, code, etc...)
         - The documentation should be re-organized (wrong location)
         - The documentation is out-dated
+  - type: textarea
+    id: changes
+    attributes:
+      label: Changes
+      description: Describe what you would change in this page and how you would improve it.
+    validations:
+      required: true

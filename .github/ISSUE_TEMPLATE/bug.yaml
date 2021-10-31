@@ -1,0 +1,44 @@
+name: 🐛 Bug Report
+description: File a bug report
+title: "🐛 "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report !
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened ?
+      description: Describe the bug you met.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What is the expected behavior ?
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Describe the steps to follow to reproduce the bug.
+      value: "* "
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Version
+      description: Please provide the version you're using (run the commands in backticks on a shell).
+      value: |-
+        - Python: `python --version`
+        - PyTeRe: `pip show pytere | grep -E ^Version`
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs & stacktraces
+      description: Please copy and paste any relevant log output, or stacktraces. This will be automatically formatted into code, so no need for backticks.
+      render: shell

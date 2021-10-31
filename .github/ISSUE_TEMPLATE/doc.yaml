@@ -1,0 +1,31 @@
+name: 📚 Documentation change
+description: Ask for a change in the documentation
+title: "📚 "
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reading the documentation !
+  - type: textarea
+    id: page
+    attributes:
+      label: Page
+      description: Link the page of the doc you would like to modify.
+  - type: textarea
+    id: changes
+    attributes:
+      label: Changes
+      description: Describe what you would change in this page and how you would improve it.
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: What the docs needs to be changed ?
+      multiple: true
+      options:
+        - The documentation is unclear or confusing
+        - Additional details are needed (examples, code, etc...)
+        - The documentation should be re-organized (wrong location)
+        - The documentation is out-dated

@@ -20,3 +20,7 @@ jobs:
         run: |
           pip install pyproject-flake8
           pflake8 .
+      - name: Check docstrings with darglint
+        run: |
+          pip install darglint
+          darglint .

@@ -49,6 +49,8 @@ plugins:
 
 extra:
   generator: false
+  version:
+    provider: mike
 
 extra_css:
   - css/mkdocstrings.css

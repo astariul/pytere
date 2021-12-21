@@ -4,6 +4,7 @@ repo_name: "astariul/pytere"
 
 theme:
   name: material
+  custom_dir: mkdocs
   logo: "assets/flame.svg"
   favicon: "assets/flame.svg"
   features:
@@ -49,6 +50,8 @@ plugins:
 
 extra:
   generator: false
+  version:
+    provider: mike
 
 extra_css:
   - css/mkdocstrings.css

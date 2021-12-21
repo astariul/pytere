@@ -29,6 +29,6 @@ jobs:
         run: |
           version=$(pip show pytere | grep Version | cut -d ' ' -f 2)
           bversion=$(echo $version | cut -d '.' -f 1,2)
-          python -m mike deploy --push --update-aliases $bversion latest
-          python -m mike retitle --push latest $version
-          python -m mike set-default --push latest
+          mike deploy --push --update-aliases $bversion latest
+          mike retitle --push latest $version
+          mike set-default --push latest

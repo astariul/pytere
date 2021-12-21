@@ -28,6 +28,6 @@ jobs:
           git config --global user.email docs@dummy.bot.com
       - name: Build docs and push with mike
         run: |
-          python -m mike deploy --push --update-aliases master
+          mike deploy --push --update-aliases master
           version=$(pip show pytere | grep Version | cut -d ' ' -f 2)
-          python -m mike retitle --push master $version
+          mike retitle --push master $version

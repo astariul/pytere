@@ -26,10 +26,10 @@ setuptools.setup(
     url="https://github.com/astariul/pytere",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     install_requires=reqs,
     extras_require=extras_require,
 )

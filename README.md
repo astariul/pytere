@@ -9,8 +9,7 @@ Python Template repository
     <a href="https://github.com/astariul/pytere/actions/workflows/lint.yaml"><img src="https://github.com/astariul/pytere/actions/workflows/lint.yaml/badge.svg" alt="Lint status" /></a>
     <img src=".github/badges/coverage.svg" alt="Coverage status" />
     <a href="https://astariul.github.io/pytere"><img src="https://img.shields.io/website?down_message=failing&label=docs&up_color=green&up_message=passing&url=https%3A%2F%2Fastariul.github.io%2Fpytere" alt="Docs" /></a>
-</p>
-<p align="center">
+    <br>
     <a href="https://pycqa.github.io/isort/"><img src="https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat" alt="isort" /></a>
     <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="black" /></a>
     <a href="https://github.com/PyCQA/flake8"><img src="https://img.shields.io/badge/code%20style-flake8-blue" alt="flake8" /></a>
@@ -26,7 +25,7 @@ Python Template repository
   <a href="#faq">FAQ</a> •
   <a href="#contribute">Contribute</a>
   <br>
-  <a href="https://astariul.github.io/pytere/" target="_blank">Documentation</a> •
+  <a href="https://astariul.github.io/pytere/" target="_blank">Documentation</a>
 </p>
 
 
@@ -38,12 +37,12 @@ It's just a template repository for python, with the following features :
 
 * 📚 Beautiful documentation with [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/), published as a Github page with [mike](https://github.com/jimporter/mike) automatically
 * ✨ Code style checks with [isort](https://github.com/PyCQA/isort), [black](https://github.com/psf/black), [pflake8](https://github.com/csachs/pyproject-flake8), [darglint](https://github.com/terrencepreilly/darglint)
-* <img src="https://gist.githubusercontent.com/astariul/b2b41b70b8a5c7ae734bbc02f96076fe/raw/eefff9046ed75d6e8ed3070db5b27eb94cd782fa/precommit.svg" width="24"> Easy development with [pre-commit hooks](https://pre-commit.com/)
+* 🅿️ Easy development with [pre-commit hooks](https://pre-commit.com/)
 * ✅ Tests with [pytest](https://docs.pytest.org/) and coverage without external tools
 * :octocat: CI with [Github actions](https://github.com/features/actions)
 * 📝 Issues & PR templates
 * 🤖 Stale bot & Dependabot
-* 🚀 Release automatically uploaded to PyPi
+* 🚀 Releases automatically uploaded to PyPi
 
 
 <h2 align="center">Install</h2>
@@ -71,7 +70,7 @@ pip install -e .
 `pytere` does not contain any useful code because it's a template repository.  
 But you can check if the package is correctly installed with :
 
-```
+```python
 from pytere import is_odd
 
 print(is_odd(2))        # False
@@ -80,7 +79,7 @@ print(is_odd(2))        # False
 
 <h2 align="center">FAQ</h2>
 
-#### **Why creating yet another template, there is already plenty on the internet ?**
+#### ❓ **Why creating yet another template, there is already plenty on the internet ?**
 
 True, but I couldn't find one that entirely satisfies my needs and uses
 the tools I want.
@@ -91,9 +90,7 @@ Or the test coverage was provided by an external tools, but I wanted everything 
 
 Etc... Hence the creation of this repository.
 
----
-
-#### **Can I use this template for a private repository ?**
+#### ❓ **Can I use this template for a private repository ?**
 
 Absolutely !
 

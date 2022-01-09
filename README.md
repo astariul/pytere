@@ -84,11 +84,8 @@ print(is_odd(2))        # False
 True, but I couldn't find one that entirely satisfies my needs and uses
 the tools I want.
 
-For example, a lot of templates uses **Sphinx** for the documentation, but I'm much more comfortable with **MkDocs**.
-
-Or the test coverage was provided by an external tools, but I wanted everything in Github.
-
-Etc... Hence the creation of this repository.
+For example, a lot of templates uses **Sphinx** for the documentation, but I'm much more comfortable with **MkDocs**. Or the test coverage was provided by an external tools, but I wanted everything in Github. Etc...  
+Hence the creation of this repository.
 
 #### ❓ **Can I use this template for a private repository ?**
 

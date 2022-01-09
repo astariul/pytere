@@ -83,7 +83,7 @@ print(is_odd(2))  # False
 To use this template, click the button "Use this template" :
 
 <p align="center">
-  [![](https://img.shields.io/badge/%20-Use%20this%20template-green?style=for-the-badge&color=347d39)](https://github.com/astariul/pytere/generate)
+  <a href="https://github.com/astariul/pytere/generate"><img src="https://img.shields.io/badge/%20-Use%20this%20template-green?style=for-the-badge&color=347d39" alt="Use template" /></a>
 </p>
 
 It will prompt you to create a new Github repository.

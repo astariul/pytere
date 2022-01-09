@@ -80,9 +80,11 @@ print(is_odd(2))  # False
 
 <h2 align="center">Use this template</h2>
 
-To use this template, simply create a new Github repository by clicking "Use this template" button : [![](https://img.shields.io/badge/%20-Use%20this%20template-green?style=for-the-badge&color=347d39)](https://github.com/astariul/pytere/generate)
+To use this template, click the button "Use this template" : [![](https://img.shields.io/badge/%20-Use%20this%20template-green?style=for-the-badge&color=347d39)](https://github.com/astariul/pytere/generate)
 
-Then replace the content with your own package name, own code, and update the links to point to your own repository.  
+It will prompt you to create a new Github repository.
+
+Then replace the content  in your freshly created repository, with your own package name, own code, and update the links to point to your own repository.  
 More details in the [documentation](https://astariul.github.io/pytere/usage).
 
 

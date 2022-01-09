@@ -22,6 +22,7 @@ Python Template repository
   <a href="#description">Description</a> •
   <a href="#install">Install</a> •
   <a href="#usage">Usage</a> •
+  <a href="#use-this-template">Use this template</a> •
   <a href="#faq">FAQ</a> •
   <a href="#contribute">Contribute</a>
   <br>
@@ -73,8 +74,18 @@ But you can check if the package is correctly installed with :
 ```python
 from pytere import is_odd
 
-print(is_odd(2))        # False
+print(is_odd(2))  # False
 ```
+
+
+<h2 align="center">Use this template</h2>
+
+To use this template, simply create a new Github repository by clicking this button :
+
+<a class="btn btn-primary ml-2" href="/astariul/pytere/generate">Use this template</a>
+
+Then replace the content with your own package name, own code, and update the links to point to your own repository.  
+More details in the [documentation](https://astariul.github.io/pytere/usage).
 
 
 <h2 align="center">FAQ</h2>

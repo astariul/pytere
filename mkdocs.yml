@@ -35,6 +35,8 @@ markdown_extensions:
 
 nav:
   - Welcome: "index.md"
+  - "features.md"
+  - "usage.md"
   - Code reference:
     - "code_ref.md"
 

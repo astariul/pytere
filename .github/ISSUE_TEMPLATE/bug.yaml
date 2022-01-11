@@ -33,7 +33,7 @@ body:
       description: Please provide the version you're using (run the commands in backticks on a shell).
       value: |-
         - Python: `python --version`
-        - PyTeRe: `pip show pytere | grep -E ^Version`
+        - pytere: `pip show pytere | grep -E ^Version`
     validations:
       required: true
   - type: textarea

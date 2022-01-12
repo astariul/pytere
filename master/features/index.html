@@ -730,11 +730,17 @@
 </div>
 <h3 id="continuous-deployment">Continuous Deployment</h3>
 <p>Continuous Deployment (<em>CD</em>) is here to automatically deploying whatever needs to be deployed. It avoids manual labor.</p>
-<p>Two Github actions are used for CD : one for deploying the latest documentation (<em>ran whenever a commit is pushed in the main branch</em>), and one for deploying the documentation of stable versions (<em>ran whenever a release is published</em>).</p>
+<p>Three Github actions are used for CD :</p>
+<ul>
+<li>Deploying the latest documentation (<em>ran whenever a commit is pushed in the main branch</em>)</li>
+<li>Deploying the documentation of stable versions (<em>ran whenever a release is published</em>)</li>
+<li>Publishing the package to PyPi (<em>ran whenever a release is published</em>)</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Where to modify it ?</p>
 <p>You can modify the Github action for latest documentation deployment in <code>.github/workflows/mike_dev.yaml</code>.</p>
 <p>You can modify the Github action for stable documentation deployment in <code>.github/workflows/mike_stable.yaml</code>.</p>
+<p>You can modify the Github action for package publishing to PyPi in <code>.github/workflows/auto_pypi.yaml</code>.</p>
 </div>
 <h3 id="others">Others</h3>
 <p>There is one more Github action, which takes care of labeling and closing any stale issue or PR.</p>

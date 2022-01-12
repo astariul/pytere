@@ -41,6 +41,9 @@ Of course you also need to update the content of the documentation. You can do t
 
 For the code reference (in `docs/code_ref.md`), make sure to change the name from `pytere` to the name of your package.
 
+!!! info
+    The documentation will be published in Github page ***after*** you create a Github release.
+
 ### Change the package name
 
 Make sure to replace the name of the folder `pytere/`, which contains the source code of the package, to the name of ***your*** package.

@@ -10,6 +10,10 @@ The very first step is to create your own repository from this template reposito
 
 It will prompt you to create a new Github repository.
 
+## Enable Dependabot
+
+From the Github website, on your repository page, you can enable [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository) by going to the `Settings` tab of your repository, then in the `Security & analysis` section you can enable `Dependabot alerts` and `Dependabot security updates`.
+
 ## Add your content
 
 Once your repository is created, you can just clone it and replace the dummy content with ***your*** content.

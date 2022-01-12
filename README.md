@@ -43,7 +43,7 @@ It's just a template repository for python, with the following features :
 * :octocat: CI with [Github actions](https://github.com/features/actions)
 * 📝 Issues & PR templates
 * 🤖 Stale bot & Dependabot
-* 🚀 Releases automatically uploaded to PyPi
+* 🚀 Releases automatically published to PyPi
 
 
 <h2 align="center">Install</h2>

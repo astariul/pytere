@@ -76,3 +76,13 @@ Head over to the [Features](features.md) page to see which file to remove.
 ## Enable Dependabot
 
 From the Github website, on your repository page, you can enable [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository) by going to the `Settings` tab of your repository, then in the `Security & analysis` section you can enable `Dependabot alerts` and `Dependabot security updates`.
+
+
+## Add your PyPi API token
+
+The Github action that automatically publish your package to PyPi (see [Features](features.md#continuous-deployment)) requires your [PyPi API token](https://pypi.org/help/#apitoken).
+
+You can store the API token in a [Github secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets).  
+To do this, go to the `Settings` tab of your Github repository, then go to the `Secrets` section, and click the button `New repository secret`.
+
+Then set the name of the secret as `PYPI_API_TOKEN`, and put your API token in the value field.

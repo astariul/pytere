@@ -140,12 +140,18 @@ Two Github actions are used for CI : one for the code format, and one for the un
 
 Continuous Deployment (_CD_) is here to automatically deploying whatever needs to be deployed. It avoids manual labor.
 
-Two Github actions are used for CD : one for deploying the latest documentation (_ran whenever a commit is pushed in the main branch_), and one for deploying the documentation of stable versions (_ran whenever a release is published_).
+Three Github actions are used for CD :
+
+* Deploying the latest documentation (_ran whenever a commit is pushed in the main branch_)
+* Deploying the documentation of stable versions (_ran whenever a release is published_)
+* Publishing the package to PyPi (_ran whenever a release is published_)
 
 !!! note "Where to modify it ?"
     You can modify the Github action for latest documentation deployment in `.github/workflows/mike_dev.yaml`.
 
     You can modify the Github action for stable documentation deployment in `.github/workflows/mike_stable.yaml`.
+
+    You can modify the Github action for package publishing to PyPi in `.github/workflows/auto_pypi.yaml`.
 
 
 ### Others

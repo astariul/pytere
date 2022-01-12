@@ -41,6 +41,9 @@ Of course you also need to update the content of the documentation. You can do t
 
 For the code reference (in `docs/code_ref.md`), make sure to change the name from `pytere` to the name of your package.
 
+!!! info
+    The documentation will be published in Github page ***after*** you create a Github release.
+
 ### Change the package name
 
 Make sure to replace the name of the folder `pytere/`, which contains the source code of the package, to the name of ***your*** package.
@@ -69,3 +72,7 @@ A few links to update in `.github/` folder :
 Optionally, if there is some features you don't want (like the Github action that automatically release your code to PyPi), you can remove it !
 
 Head over to the [Features](features.md) page to see which file to remove.
+
+## Enable Dependabot
+
+From the Github website, on your repository page, you can enable [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository) by going to the `Settings` tab of your repository, then in the `Security & analysis` section you can enable `Dependabot alerts` and `Dependabot security updates`.

@@ -385,6 +385,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enable-dependabot" class="md-nav__link">
+    Enable Dependabot
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -545,6 +552,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enable-dependabot" class="md-nav__link">
+    Enable Dependabot
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -588,6 +602,10 @@
 <p>In the file <code>mkdocs.yml</code>, replace the <code>site_name</code>, <code>repo_url</code>, <code>repo_name</code>.</p>
 <p>Of course you also need to update the content of the documentation. You can do this by updating the <code>md</code> files in the <code>docs/</code> folder.</p>
 <p>For the code reference (in <code>docs/code_ref.md</code>), make sure to change the name from <code>pytere</code> to the name of your package.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The documentation will be published in Github page <strong><em>after</em></strong> you create a Github release.</p>
+</div>
 <h3 id="change-the-package-name">Change the package name</h3>
 <p>Make sure to replace the name of the folder <code>pytere/</code>, which contains the source code of the package, to the name of <strong><em>your</em></strong> package.</p>
 <p>Also don't forget to remove the dummy code in <code>pytere/__init__.py</code> !</p>
@@ -606,6 +624,8 @@
 <h3 id="optionally">Optionally</h3>
 <p>Optionally, if there is some features you don't want (like the Github action that automatically release your code to PyPi), you can remove it !</p>
 <p>Head over to the <a href="../features/">Features</a> page to see which file to remove.</p>
+<h2 id="enable-dependabot">Enable Dependabot</h2>
+<p>From the Github website, on your repository page, you can enable <a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository">Dependabot</a> by going to the <code>Settings</code> tab of your repository, then in the <code>Security &amp; analysis</code> section you can enable <code>Dependabot alerts</code> and <code>Dependabot security updates</code>.</p>
 
               
             </article>

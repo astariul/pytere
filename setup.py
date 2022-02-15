@@ -37,7 +37,7 @@ extras_require["dev"] = (
 
 setuptools.setup(
     name="pytere",
-    version="0.3.0",
+    version="1.0.0.dev0",
     author="Nicolas REMOND",
     author_email="remondnicola@gmail.com",
     description="A Python Template Repository",

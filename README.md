@@ -37,7 +37,7 @@ Python Template repository
 It's just a template repository for python, with the following features :
 
 * 📚 Beautiful documentation with [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/), published as a Github page with [mike](https://github.com/jimporter/mike) automatically
-* ✨ Code style checks with [isort](https://github.com/PyCQA/isort), [black](https://github.com/psf/black), [pflake8](https://github.com/csachs/pyproject-flake8), [darglint](https://github.com/terrencepreilly/darglint)
+* ✨ Code style checks with [isort](https://github.com/PyCQA/isort), [black](https://github.com/psf/black), [flake518](https://github.com/carstencodes/flake518), [darglint](https://github.com/terrencepreilly/darglint)
 * 🅿️ Easy development with [pre-commit hooks](https://pre-commit.com/)
 * ✅ Tests with [pytest](https://docs.pytest.org/) and coverage without external tools
 * :octocat: CI with [Github actions](https://github.com/features/actions)

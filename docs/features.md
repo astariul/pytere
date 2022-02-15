@@ -63,20 +63,20 @@ black .
     You can modify the configuration of `black` in `pyproject.toml`, under the section `[tool.black]`.
 
 
-### `pflake8`
+### `flake518`
 
 [`flake8`](https://github.com/PyCQA/flake8) is another code formatter, with additional checks, such as code complexity.
 
-[`pflake8`](https://github.com/csachs/pyproject-flake8) is just a small wrapper around `flake8`, that allows to manage its configuration from a `pyproject` configuration file (so we have a single configuration file for all tools).
+[`flake518`](https://github.com/carstencodes/flake518) is just a small wrapper around `flake8`, that allows to manage its configuration from a `pyproject` configuration file (so we have a single configuration file for all tools).
 
-You can run `pflake8` manually by running :
+You can run `flake518` manually by running :
 
 ```bash
-pflake8 .
+flake518 .
 ```
 
 !!! note "Where to modify it ?"
-    You can modify the configuration of `pflake8` in `pyproject.toml`, under the section `[tool.flake8]`.
+    You can modify the configuration of `flake518` in `pyproject.toml`, under the section `[tool.flake8]`.
 
 ### `darglint`
 
@@ -114,7 +114,7 @@ Several pre-commit hooks are used in this template repository :
 * Ensure no large files are added
 * Lint code with `isort`
 * Lint code with `black`
-* Lint code with `pflake8`
+* Lint code with `flake518`
 * Lint code with `darglint`
 * Ensure unit-tests pass
 * Ensure the coverage badge is up-to-date

@@ -18,8 +18,8 @@ jobs:
           black --check .
       - name: Check format with flake8
         run: |
-          pip install pyproject-flake8
-          pflake8 .
+          pip install flake518
+          flake518 .
       - name: Check docstrings with darglint
         run: |
           pip install darglint

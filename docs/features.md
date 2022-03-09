@@ -13,7 +13,7 @@ Check out [Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs
 
     If you want to modify the configuration, take a look at `mkdocs.yml`.
 
-    If you want to modify the theme (advanced), go to `mkdocs/`.
+    If you want to modify the theme (advanced), go to `docs/mkdocs/`.
 
 ---
 

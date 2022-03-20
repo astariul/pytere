@@ -104,6 +104,15 @@ python -m pytest
 
     If you wish to **not** run unit-tests, you need to remove it from the [pre-commit hooks](#pre-commit-hooks) **and** from the [Github actions](#continuous-integration).
 
+---
+
+The tests also check the test coverage, with the `pytest-cov` plugin.
+
+By default, the tests will fail if the test coverage is below **80%**.
+
+!!! note "Where to modify it ?"
+    You can change the `pytest` configuration in `pyproject.toml`. You can also change the coverage threshold in the same file.
+
 ## Pre-commit hooks
 
 Several pre-commit hooks are used in this template repository :

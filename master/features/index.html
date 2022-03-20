@@ -696,12 +696,24 @@
 <h2 id="unit-testing">Unit-testing</h2>
 <p>Unit-tests are implemented with <a href="https://docs.pytest.org/"><code>pytest</code></a>.</p>
 <p>You can run the unit-tests manually by running :</p>
-<div class="highlight"><pre><span></span><code>python -m pytest
+<div class="highlight"><pre><span></span><code>pytest
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Where to modify it ?</p>
 <p>You can add/remove tests in the python files in <code>tests/</code>.</p>
 <p>If you wish to <strong>not</strong> run unit-tests, you need to remove it from the <a href="#pre-commit-hooks">pre-commit hooks</a> <strong>and</strong> from the <a href="#continuous-integration">Github actions</a>.</p>
+</div>
+<hr />
+<p>The tests also check the test coverage, with the <code>pytest-cov</code> plugin.</p>
+<p>By default, the tests will fail if the test coverage is below <strong>80%</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Where to modify it ?</p>
+<p>You can change the <code>pytest</code> configuration in <code>pyproject.toml</code>. You can also change the coverage threshold in the same file.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>After running the unit-tests, you can update the coverage badge manually with <code>coverage-badge -o .github/badges/coverage.svg -f</code>.</p>
+<p>Note that you don't need to do it by yourself, a pre-commit hook will take care of that (see <a href="#pre-commit-hooks">Pre-commit hooks</a>).</p>
 </div>
 <h2 id="pre-commit-hooks">Pre-commit hooks</h2>
 <p>Several pre-commit hooks are used in this template repository :</p>
@@ -714,7 +726,6 @@
 <li>Lint code with <code>black</code></li>
 <li>Lint code with <code>flake518</code></li>
 <li>Lint code with <code>darglint</code></li>
-<li>Ensure unit-tests pass</li>
 <li>Ensure the coverage badge is up-to-date</li>
 </ul>
 <div class="admonition note">

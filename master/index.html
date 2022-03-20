@@ -344,6 +344,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    Unit-tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
@@ -533,6 +540,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    Unit-tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
@@ -620,12 +634,31 @@ pip install -e .
 <p>To contribute, install the package locally (see <a href="#local">Installation</a>), create your own branch, add your code/tests/documentation, and open a PR !</p>
 <h3 id="pre-commit-hooks">Pre-commit hooks</h3>
 <p>Pre-commit hooks are set to check the code added whenever you commit something.</p>
-<p>When you try to commit your code, hooks are run, and if anything fails (<em>linters, tests, etc...</em>), your code will not be committed. You then have to fix your code and try to commit again !</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<p>When you try to commit your code, hooks are automatically run, and if you code does not meet the quality required by linters, it will not be committed. You then have to fix your code and try to commit again !</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>If you never ran the hooks before, install it with :
 <div class="highlight"><pre><span></span><code>pre-commit install
 </code></pre></div></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can manually run the pre-commit hooks with :
+<div class="highlight"><pre><span></span><code>pre-commit run --all-files
+</code></pre></div></p>
+</div>
+<h3 id="unit-tests">Unit-tests</h3>
+<p>When you contribute, you need to make sure all the unit-tests pass. You should also add tests if necessary !</p>
+<p>You can run the tests with :</p>
+<div class="highlight"><pre><span></span><code>pytest
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !</p>
 </div>
 <h3 id="documentation">Documentation</h3>
 <p>When you contribute, make sure to keep the documentation up-to-date.</p>

@@ -85,13 +85,35 @@ To contribute, install the package locally (see [Installation](#local)), create 
 
 Pre-commit hooks are set to check the code added whenever you commit something.
 
-When you try to commit your code, hooks are run, and if anything fails (_linters, tests, etc..._), your code will not be committed. You then have to fix your code and try to commit again !
+When you try to commit your code, hooks are automatically run, and if you code does not meet the quality required by linters, it will not be committed. You then have to fix your code and try to commit again !
 
-!!! info
+!!! important
     If you never ran the hooks before, install it with :
     ```bash
     pre-commit install
     ```
+
+!!! info
+    You can manually run the pre-commit hooks with :
+    ```bash
+    pre-commit run --all-files
+    ```
+
+### Unit-tests
+
+When you contribute, you need to make sure all the unit-tests pass. You should also add tests if necessary !
+
+You can run the tests with :
+
+```bash
+pytest
+```
+
+!!! info
+    Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !
+
+!!! hint
+    Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !
 
 ### Documentation
 

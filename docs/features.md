@@ -96,7 +96,7 @@ Unit-tests are implemented with [`pytest`](https://docs.pytest.org/).
 You can run the unit-tests manually by running :
 
 ```bash
-python -m pytest
+pytest
 ```
 
 !!! note "Where to modify it ?"
@@ -113,6 +113,11 @@ By default, the tests will fail if the test coverage is below **80%**.
 !!! note "Where to modify it ?"
     You can change the `pytest` configuration in `pyproject.toml`. You can also change the coverage threshold in the same file.
 
+!!! info
+    After running the unit-tests, you can update the coverage badge manually with `coverage-badge -o .github/badges/coverage.svg -f`.
+
+    Note that you don't need to do it by yourself, a pre-commit hook will take care of that (see [Pre-commit hooks](#pre-commit-hooks)).
+
 ## Pre-commit hooks
 
 Several pre-commit hooks are used in this template repository :
@@ -125,7 +130,6 @@ Several pre-commit hooks are used in this template repository :
 * Lint code with `black`
 * Lint code with `flake518`
 * Lint code with `darglint`
-* Ensure unit-tests pass
 * Ensure the coverage badge is up-to-date
 
 !!! note "Where to modify it ?"

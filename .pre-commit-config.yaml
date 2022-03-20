@@ -31,14 +31,6 @@ repos:
       - id: darglint
   - repo: local
     hooks:
-      - id: pytest
-        name: pytest
-        entry: pytest
-        language: system
-        pass_filenames: false
-        always_run: true
-  - repo: local
-    hooks:
       - id: covbadge
         name: Coverage badge update
         entry: coverage-badge -o .github/badges/coverage.svg -f

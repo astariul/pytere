@@ -112,7 +112,7 @@ pytest
 !!! info
     Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !
 
-!!! hint
+!!! info
     Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !
 
 ### Documentation

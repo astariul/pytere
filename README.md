@@ -110,7 +110,7 @@ But some things might not work (for example the release badge), and you might wa
 
 <h2 align="center">Contribute</h2>
 
-To contribute, install the package locally, create your own branch, add your code/tests/documentation, and open a PR !
+To contribute, install the package locally, create your own branch, add your code (and tests, and documentation), and open a PR !
 
 ### Pre-commit hooks
 

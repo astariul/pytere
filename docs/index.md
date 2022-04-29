@@ -79,7 +79,7 @@ List of extra dependencies :
 
 ## Contribute
 
-To contribute, install the package locally (see [Installation](#local)), create your own branch, add your code/tests/documentation, and open a PR !
+To contribute, install the package locally (see [Installation](#local)), create your own branch, add your code (and tests, and documentation), and open a PR !
 
 ### Pre-commit hooks
 

@@ -99,7 +99,7 @@ More details in the [documentation](https://astariul.github.io/pytere/latest/usa
 True, but I couldn't find one that entirely satisfies my needs and uses
 the tools I want.
 
-For example, a lot of templates uses **Sphinx** for the documentation, but I'm much more comfortable with **MkDocs**. Or the test coverage was provided by an external tools, but I wanted everything in Github. Etc...  
+For example, a lot of templates use **Sphinx** for the documentation, but I'm much more comfortable with **MkDocs**. Or the test coverage was provided by an external tool, but I wanted everything in Github. Etc...  
 Hence the creation of this repository.
 
 #### ❓ **Can I use this template for a private repository ?**
@@ -124,7 +124,7 @@ pre-commit install
 
 ---
 
-Then you can just try to commit your code. If you code does not meet the quality required by linters, it will not be committed. You can just fix your code and try to commit again !
+Then you can just try to commit your code. If your code does not meet the quality required by linters, it will not be committed. You can just fix your code and try to commit again !
 
 ---
 

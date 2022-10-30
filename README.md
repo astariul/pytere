@@ -89,7 +89,7 @@ To use this template, click the button "Use this template" :
 It will prompt you to create a new Github repository.
 
 Then replace the content  in your freshly created repository, with your own package name, own code, and update the links to point to your own repository.  
-More details in the [documentation](https://astariul.github.io/pytere/usage).
+More details in the [documentation](https://astariul.github.io/pytere/latest/usage/).
 
 
 <h2 align="center">FAQ</h2>

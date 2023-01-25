@@ -4,20 +4,15 @@ on: pull_request
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.7]
-
     steps:
     - uses: actions/checkout@v3
       with: # Use deploy key to ensure pushed change trigger checks as well : https://github.com/peter-evans/create-pull-request/blob/master/docs/concepts-guidelines.md#workarounds-to-trigger-further-workflow-runs
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: "3.8"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

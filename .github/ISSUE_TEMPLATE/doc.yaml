@@ -15,7 +15,7 @@ body:
   - type: dropdown
     id: reason
     attributes:
-      label: What the docs needs to be changed ?
+      label: Why the docs needs to be changed ?
       multiple: true
       options:
         - The documentation is unclear or confusing

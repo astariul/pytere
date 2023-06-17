@@ -31,23 +31,10 @@ Check [mike's documentation](https://github.com/jimporter/mike) for more details
 
 ## Code formatting & linters
 
-To lint and check the format of the code, this template uses several libraries : `isort`, `black`, `flake8`, and `darglint`.
+To lint and check the format of the code, this template uses `black` and `ruff`.
 
 !!! note "Where to modify it ?"
     If you wish to **not** use one of these tools, you need to remove it from the [pre-commit hooks](#pre-commit-hooks) **and** from the [Github actions](#continuous-integration).
-
-### `isort`
-
-[`isort`](https://github.com/PyCQA/isort) is a library that sorts `import` statements in your python code.
-
-You can run `isort` manually by running :
-
-```bash
-isort .
-```
-
-!!! note "Where to modify it ?"
-    You can modify the configuration of `isort` in `pyproject.toml`, under the section `[tool.isort]`.
 
 ### `black`
 
@@ -63,30 +50,18 @@ black .
     You can modify the configuration of `black` in `pyproject.toml`, under the section `[tool.black]`.
 
 
-### `flake518`
+### `ruff`
 
-[`flake8`](https://github.com/PyCQA/flake8) is another code formatter, with additional checks, such as code complexity.
+[`ruff`](https://github.com/astral-sh/ruff) is code linter and replace the need for several tools, like `isort` or `flake8`.
 
-[`flake518`](https://github.com/carstencodes/flake518) is just a small wrapper around `flake8`, that allows to manage its configuration from a `pyproject` configuration file (so we have a single configuration file for all tools).
-
-You can run `flake518` manually by running :
+You can run `ruff` manually by running :
 
 ```bash
-flake518 .
+ruff check .
 ```
 
 !!! note "Where to modify it ?"
-    You can modify the configuration of `flake518` in `pyproject.toml`, under the section `[tool.flake8]`.
-
-### `darglint`
-
-[darglint](https://github.com/terrencepreilly/darglint) is a docstring linter, ensuring the docstrings written match the source code.
-
-You can run `darglint` manually by running :
-
-```bash
-darglint .
-```
+    You can modify the configuration of `ruff` in `pyproject.toml`. There are several sections, `ruff` uses all the sections starting with `[tool.ruff]`.
 
 
 ## Unit-testing
@@ -126,10 +101,8 @@ Several pre-commit hooks are used in this template repository :
 * Ensure files have an empty line at the end
 * Check the syntax of `yaml` files
 * Ensure no large files are added
-* Lint code with `isort`
-* Lint code with `black`
-* Lint code with `flake518`
-* Lint code with `darglint`
+* Format code with `black`
+* Lint code with `ruff`
 * Ensure the coverage badge is up-to-date
 
 !!! note "Where to modify it ?"

@@ -1,3 +1,6 @@
+"""Dummy package content for `pytere`."""
+
+
 def is_odd(x: float):
     """Function checking if a number is odd.
 

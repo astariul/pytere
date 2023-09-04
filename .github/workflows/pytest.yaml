@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with: # Use deploy key to ensure pushed change trigger checks as well : https://github.com/peter-evans/create-pull-request/blob/master/docs/concepts-guidelines.md#workarounds-to-trigger-further-workflow-runs
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Set up Python

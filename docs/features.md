@@ -139,6 +139,17 @@ Three Github actions are used for CD :
 
     You can modify the Github action for package publishing to PyPi in `.github/workflows/auto_pypi.yaml`.
 
+!!! warning "Make sure to give write permissions to the Github token"
+    The github actions `.github/workflows/mike_dev.yaml` and `.github/workflows/mike_stable.yaml` deploy the documentation in the branch `gh-pages`. In order to be able to push the changes, Github bot needs to have write permission to the repository.
+
+    Go to the settings of your repository, then in the tab `Actions`, find the section `Workflow permissions` and make sure to select "Read & write permissions".
+
+    If you don't select "Read & write permissions", the github actions publishing the documentation will fail with the following error :
+
+    ```
+    error: failed to push branch gh-pages to origin: "remote: Permission denied to github-actions[bot]."
+    ```
+
 
 ### Others
 

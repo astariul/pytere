@@ -78,6 +78,13 @@ Head over to the [Features](features.md) page to see which file to remove.
 From the Github website, on your repository page, you can enable [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository) by going to the `Settings` tab of your repository, then in the `Security & analysis` section you can enable `Dependabot alerts` and `Dependabot security updates`.
 
 
+## Give write permissions to workflows
+
+Go to the settings of your repository, then in the tab `Actions`, find the section `Workflow permissions` and make sure to select "Read & write permissions".
+
+This is needed because the `mike` Github actions needs to push to the `gh-pages` branch to publish your documentation.
+
+
 ## Add your PyPi API token
 
 The Github action that automatically publish your package to PyPi (see [Features](features.md#continuous-deployment)) requires your [PyPi API token](https://pypi.org/help/#apitoken).

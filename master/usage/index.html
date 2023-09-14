@@ -436,6 +436,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#give-write-permissions-to-workflows" class="md-nav__link">
+    Give write permissions to workflows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#add-your-pypi-api-token" class="md-nav__link">
     Add your PyPi API token
   </a>
@@ -623,6 +630,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#give-write-permissions-to-workflows" class="md-nav__link">
+    Give write permissions to workflows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#add-your-pypi-api-token" class="md-nav__link">
     Add your PyPi API token
   </a>
@@ -697,6 +711,9 @@
 <p>Head over to the <a href="../features/">Features</a> page to see which file to remove.</p>
 <h2 id="enable-dependabot">Enable Dependabot</h2>
 <p>From the Github website, on your repository page, you can enable <a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository">Dependabot</a> by going to the <code>Settings</code> tab of your repository, then in the <code>Security &amp; analysis</code> section you can enable <code>Dependabot alerts</code> and <code>Dependabot security updates</code>.</p>
+<h2 id="give-write-permissions-to-workflows">Give write permissions to workflows</h2>
+<p>Go to the settings of your repository, then in the tab <code>Actions</code>, find the section <code>Workflow permissions</code> and make sure to select "Read &amp; write permissions".</p>
+<p>This is needed because the <code>mike</code> Github actions needs to push to the <code>gh-pages</code> branch to publish your documentation.</p>
 <h2 id="add-your-pypi-api-token">Add your PyPi API token</h2>
 <p>The Github action that automatically publish your package to PyPi (see <a href="../features/#continuous-deployment">Features</a>) requires your <a href="https://pypi.org/help/#apitoken">PyPi API token</a>.</p>
 <p>You can store the API token in a <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Github secret</a>.<br />

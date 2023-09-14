@@ -765,6 +765,14 @@
 <p>You can modify the Github action for stable documentation deployment in <code>.github/workflows/mike_stable.yaml</code>.</p>
 <p>You can modify the Github action for package publishing to PyPi in <code>.github/workflows/auto_pypi.yaml</code>.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Make sure to give write permissions to the Github token</p>
+<p>The github actions <code>.github/workflows/mike_dev.yaml</code> and <code>.github/workflows/mike_stable.yaml</code> deploy the documentation in the branch <code>gh-pages</code>. In order to be able to push the changes, Github bot needs to have write permission to the repository.</p>
+<p>Go to the settings of your repository, then in the tab <code>Actions</code>, find the section <code>Workflow permissions</code> and make sure to select "Read &amp; write permissions".</p>
+<p>If you don't select "Read &amp; write permissions", the github actions publishing the documentation will fail with the following error :</p>
+<div class="highlight"><pre><span></span><code>error: failed to push branch gh-pages to origin: &quot;remote: Permission denied to github-actions[bot].&quot;
+</code></pre></div>
+</div>
 <h3 id="others">Others</h3>
 <p>There is one more Github action, which takes care of labeling and closing any stale issue or PR.</p>
 <div class="admonition note">

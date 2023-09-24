@@ -77,7 +77,7 @@ pytest
 !!! note "Where to modify it ?"
     You can add/remove tests in the python files in `tests/`.
 
-    If you wish to **not** run unit-tests, you need to remove it from the [pre-commit hooks](#pre-commit-hooks) **and** from the [Github actions](#continuous-integration).
+    If you wish to **not** run unit-tests, you need to remove it from the [Github actions](#continuous-integration).
 
 ---
 

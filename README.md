@@ -17,14 +17,14 @@ Python Template repository
 </p>
 
 <p align="center">
-  <a href="#description">Description</a> •
-  <a href="#install">Install</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#use-this-template">Use this template</a> •
-  <a href="#faq">FAQ</a> •
-  <a href="#contribute">Contribute</a>
-  <br>
-  <a href="https://astariul.github.io/pytere/" target="_blank">Documentation</a>
+<a href="#description">Description</a> •
+<a href="#install">Install</a> •
+<a href="#usage">Usage</a> •
+<a href="#use-this-template">Use this template</a> •
+<a href="#faq">FAQ</a> •
+<a href="#contribute">Contribute</a>
+<br>
+<a href="https://astariul.github.io/pytere/" target="_blank">Documentation</a>
 </p>
 
 
@@ -66,7 +66,7 @@ pip install -e .
 
 <h2 align="center">Usage</h2>
 
-`pytere` does not contain any useful code because it's a template repository.  
+`pytere` does not contain any useful code because it's a template repository.
 But you can check if the package is correctly installed with :
 
 ```python
@@ -86,7 +86,7 @@ To use this template, click the button "Use this template" :
 
 It will prompt you to create a new Github repository.
 
-Then replace the content  in your freshly created repository, with your own package name, own code, and update the links to point to your own repository.  
+Then replace the content in your freshly created repository, with your own package name, own code, and update the links to point to your own repository.  
 More details in the [documentation](https://astariul.github.io/pytere/latest/usage/).
 
 

@@ -28,7 +28,7 @@ extras_require = {
     "test": ["pytest~=7.0", "pytest-cov~=4.1", "coverage-badge~=1.0"],
     "hook": ["pre-commit~=3.0"],
     "lint": ["black~=23.1", "ruff~=0.1"],
-    "docs": ["mkdocs-material~=9.0", "mkdocstrings[python]~=0.18", "mike~=1.1"],
+    "docs": ["mkdocs-material~=9.0", "mkdocstrings[python]~=0.18", "mike>=1.1,<3.0"],
 }
 extras_require["all"] = sum(extras_require.values(), [])
 extras_require["dev"] = (

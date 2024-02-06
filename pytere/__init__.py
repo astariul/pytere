@@ -1,7 +1,7 @@
 """Dummy package content for `pytere`."""
 
 
-def is_odd(x: float):
+def is_odd(x: float) -> bool:
     """Function checking if a number is odd.
 
     Args:

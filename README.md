@@ -10,7 +10,6 @@ Python Template repository
     <img src=".github/badges/coverage.svg" alt="Coverage status" />
     <a href="https://astariul.github.io/pytere"><img src="https://img.shields.io/website?down_message=failing&label=docs&up_color=green&up_message=passing&url=https%3A%2F%2Fastariul.github.io%2Fpytere" alt="Docs" /></a>
     <br>
-    <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="black" /></a>
     <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="ruff" /></a>
     <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="pre-commit"></a>
     <a href="https://github.com/astariul/pytere/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="licence" /></a>
@@ -35,7 +34,7 @@ Python Template repository
 It's just a template repository for python, with the following features :
 
 * 📚 Beautiful documentation with [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/), published as a Github page with [mike](https://github.com/jimporter/mike) automatically
-* ✨ Modern code style checks with [black](https://github.com/psf/black) and [ruff](https://github.com/astral-sh/ruff)
+* ✨ Modern code style checks with [ruff](https://github.com/astral-sh/ruff)
 * 🅿️ Easy development with [pre-commit hooks](https://pre-commit.com/)
 * ✅ Tests with [pytest](https://docs.pytest.org/) and coverage without external tools
 * :octocat: CI with [Github actions](https://github.com/features/actions)

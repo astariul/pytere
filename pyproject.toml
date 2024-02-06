@@ -4,27 +4,25 @@ testpaths = [
     "tests",
 ]
 
-[tool.black]
-line-length = 119
-target-version = ["py38"]
-
 [tool.ruff]
-select = ["C", "D", "E", "F", "I", "W"]
-ignore = ["D205", "D107"]
 line-length = 119
 target-version = "py38"
 
-[tool.ruff.isort]
+[tool.ruff.lint]
+select = ["C", "D", "E", "F", "I", "W"]
+ignore = ["D205", "D107"]
+
+[tool.ruff.lint.isort]
 known-first-party = ["pytere"]
 lines-after-imports = 2
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
 "tests/**.py" = ["D"]
 "setup.py" = ["D"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"

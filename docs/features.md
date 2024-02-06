@@ -31,33 +31,24 @@ Check [mike's documentation](https://github.com/jimporter/mike) for more details
 
 ## Code formatting & linters
 
-To lint and check the format of the code, this template uses `black` and `ruff`.
+To lint and check the format of the code, this template uses `ruff`.
 
 !!! note "Where to modify it ?"
     If you wish to **not** use one of these tools, you need to remove it from the [pre-commit hooks](#pre-commit-hooks) **and** from the [Github actions](#continuous-integration).
 
-### `black`
-
-[`black`](https://github.com/psf/black) is a well-known code formatter for python.
-
-You can run `black` manually by running :
-
-```bash
-black .
-```
-
-!!! note "Where to modify it ?"
-    You can modify the configuration of `black` in `pyproject.toml`, under the section `[tool.black]`.
-
 
 ### `ruff`
 
-[`ruff`](https://github.com/astral-sh/ruff) is code linter and replace the need for several tools, like `isort` or `flake8`.
+[`ruff`](https://github.com/astral-sh/ruff) is code linter and formatter, and replace the need for several tools, like `isort`, `flake8`, or `black`.
 
 You can run `ruff` manually by running :
 
 ```bash
-ruff check .
+# Linter
+ruff check . --fix
+
+# Formatter
+ruff format .
 ```
 
 !!! note "Where to modify it ?"
@@ -101,8 +92,8 @@ Several pre-commit hooks are used in this template repository :
 * Ensure files have an empty line at the end
 * Check the syntax of `yaml` files
 * Ensure no large files are added
-* Format code with `black`
 * Lint code with `ruff`
+* Format code with `ruff`
 * Ensure the coverage badge is up-to-date
 
 !!! note "Where to modify it ?"

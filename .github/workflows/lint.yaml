@@ -10,11 +10,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.8"
-      - name: Check format with black
-        run: |
-          pip install black
-          black --check .
-      - name: Check lint with ruff
+      - name: Check lint & format with ruff
         run: |
           pip install ruff
           ruff check .
+          ruff format --check .

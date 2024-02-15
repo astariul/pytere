@@ -85,6 +85,27 @@ Go to the settings of your repository, then in the tab `Actions`, find the secti
 This is needed because the `mike` Github actions needs to push to the `gh-pages` branch to publish your documentation.
 
 
+## Development of the documentation (locally)
+Install these Python packages for mike to work in this configuration:
+```
+$ pip install mike pymdown-extensions mkdocs-material mkdocstrings mkdocstrings-python
+```
+
+Then, run these commands with the version number and name you want to use:
+* **`mike deploy --push --update-aliases X.Y.Z name`
+  - Push the documentation version as `X.Y.Z` version, and add an alias `name`.
+* **`mike retitle --push X.Y "title"`**
+  - Set the title of `X.Y.Z` as `title`.
+    For example, `title` can be the full version `X.Y.Z`.
+* **`mike set-default --push name`** to set the alias `name` as default.
+* **`mike serve`** to serve the documentation locally (for debugging).
+
+* **`mike delete --all --push`** to remove everything!
+     - Cleanup after a quick experiment, but be careful!
+
+Check [mike's documentation](https://github.com/jimporter/mike) for more details on how to use it.
+
+
 ## Add your PyPi API token
 
 The Github action that automatically publish your package to PyPi (see [Features](features.md#continuous-deployment)) requires your [PyPi API token](https://pypi.org/help/#apitoken).

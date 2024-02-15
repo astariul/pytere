@@ -19,14 +19,8 @@ Check out [Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs
 
 The documentation is **versioned** and **published as a Github page** with [mike](https://github.com/jimporter/mike).
 
-Check [mike's documentation](https://github.com/jimporter/mike) for more details on how to use it. For a very short summary :
-
-* **`mike deploy --push --update-aliases X.Y`** to push the current documentation version as `X.Y` version.
-* **`mike deploy --push --update-aliases X.Y name`** to push the current documentation version as `X.Y` version, and add an alias `name`.
-* **`mike retitle --push X.Y "title"`** to set the title of `X.Y` as `title`. For example, `title` can be the full version `X.Y.Z`.
-* **`mike set-default --push name`** to set the alias `name` as default.
-* **`mike delete --all --push`** to remove everything (careful with that !).
-* **`mike serve`** to serve the documentation locally (for debugging).
+You can use **`mike serve`** to serve the documentation locally for preview.
+For details on its usage see [usage.md](usage.md).
 
 
 ## Code formatting & linters

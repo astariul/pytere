@@ -62,6 +62,10 @@ cd pytere
 pip install -e .
 ```
 
+Or, if you use [Github CLI](https://cli.github.com/), use:
+```
+gh repo fork astariul/pytere
+```
 
 <h2 align="center">Usage</h2>
 

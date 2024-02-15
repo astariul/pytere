@@ -62,7 +62,7 @@ cd pytere
 pip install -e .
 ```
 
-Or, if you contribute to many repos, install https://cli.github.com/ and use:
+Or, if you use [Github CLI](https://cli.github.com/), use:
 ```
 gh repo fork astariul/pytere
 ```

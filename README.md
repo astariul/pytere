@@ -56,7 +56,7 @@ pip install pytere
 
 For development, you can install it locally by first cloning the repository :
 
-```js
+```
 git clone https://github.com/astariul/pytere.git
 cd pytere
 pip install -e .

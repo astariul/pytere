@@ -9,6 +9,7 @@ theme:
   favicon: "assets/flame.svg"
   features:
     - navigation.sections
+    - content.code.copy
   palette:
     - scheme: default
       primary: teal
@@ -25,6 +26,7 @@ theme:
 
 markdown_extensions:
   - admonition
+  - tables
   - pymdownx.details
   - pymdownx.caret
   - pymdownx.keys
@@ -43,9 +45,10 @@ nav:
 plugins:
   - search
   - mkdocstrings:
+      default_handler: python
       handlers:
         python:
-          rendering:
+          options:
             show_root_heading: True
             show_root_full_path: False
             members_order: source

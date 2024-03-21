@@ -8,6 +8,6 @@ def is_odd(x: float) -> bool:
         x (float): Number to check.
 
     Returns:
-        bool: True if the number is odd, False otherwise.
+        True if the number is odd, False otherwise.
     """
     return x % 2 == 1

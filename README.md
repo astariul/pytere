@@ -89,8 +89,10 @@ To use this template, click the button "Use this template" :
 
 It will prompt you to create a new Github repository.
 
-Then replace the content in your freshly created repository, with your own package name, own code, and update the links to point to your own repository.  
-More details in the [documentation](https://astariul.github.io/pytere/latest/usage/).
+Then replace the content in your freshly created repository, with your own package name, own code, and update the links to point to your own repository.
+
+> [!IMPORTANT]  
+> Check the [documentation](https://astariul.github.io/pytere/latest/usage/) for a comprehensive, step-by-step guide on how to use the template.
 
 
 <h2 align="center">FAQ</h2>
@@ -117,27 +119,30 @@ To contribute, install the package locally, create your own branch, add your cod
 
 Pre-commit hooks are set to check the code added whenever you commit something.
 
-If you never ran the hooks before, install it with :
-
-```bash
-pre-commit install
-```
-
----
+> [!NOTE]  
+> If you never ran the hooks before, install it with :
+> ```bash
+> pip install -e .[hook]
+> pre-commit install
+> ```
 
 Then you can just try to commit your code. If your code does not meet the quality required by linters, it will not be committed. You can just fix your code and try to commit again !
 
----
-
-You can manually run the pre-commit hooks with :
-
-```bash
-pre-commit run --all-files
-```
+> [!TIP]
+> You can manually run the pre-commit hooks with :
+> ```bash
+> pre-commit run --all-files
+> ```
 
 ### Tests
 
 When you contribute, you need to make sure all the unit-tests pass. You should also add tests if necessary !
+
+> [!NOTE]  
+> Install the testing dependencies with :
+> ```bash
+> pip install -e .[test]
+> ```
 
 You can run the tests with :
 
@@ -158,3 +163,9 @@ The documentation should be kept up-to-date. You can visualize the documentation
 ```bash
 mkdocs serve
 ```
+
+> [!NOTE]  
+> Before running this, you need to install the documentation dependencies :
+> ```bash
+> pip install -e .[docs]
+> ```

@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="assets/flame.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.10ba22f1.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -735,30 +735,35 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 <p>To contribute, install the package locally (see <a href="#local">Installation</a>), create your own branch, add your code (and tests, and documentation), and open a PR !</p>
 <h3 id="pre-commit-hooks">Pre-commit hooks</h3>
 <p>Pre-commit hooks are set to check the code added whenever you commit something.</p>
-<p>When you try to commit your code, hooks are automatically run, and if you code does not meet the quality required by linters, it will not be committed. You then have to fix your code and try to commit again !</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If you never ran the hooks before, install it with :
-<div class="highlight"><pre><span></span><code>pre-commit<span class="w"> </span>install
-</code></pre></div></p>
-</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<p>If you never ran the hooks before, install it with :
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>hook<span class="o">]</span>
+pre-commit<span class="w"> </span>install
+</code></pre></div></p>
+</div>
+<p>When you try to commit your code, hooks are automatically run, and if your code does not meet the quality required by linters, it will not be committed. You then have to fix your code and try to commit again !</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>You can manually run the pre-commit hooks with :
 <div class="highlight"><pre><span></span><code>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
 </code></pre></div></p>
 </div>
 <h3 id="unit-tests">Unit-tests</h3>
 <p>When you contribute, you need to make sure all the unit-tests pass. You should also add tests if necessary !</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Install the testing dependencies with :
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>test<span class="o">]</span>
+</code></pre></div></p>
+</div>
 <p>You can run the tests with :</p>
 <div class="highlight"><pre><span></span><code>pytest
 </code></pre></div>
+<hr />
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
 <p>Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !</p>
 </div>
 <h3 id="documentation">Documentation</h3>
@@ -766,6 +771,12 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 <p>You can visualize the documentation locally by running :</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before running this, you need to install the documentation dependencies :
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>docs<span class="o">]</span>
+</code></pre></div></p>
+</div>
 
 
 

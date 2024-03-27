@@ -85,15 +85,16 @@ To contribute, install the package locally (see [Installation](#local)), create 
 
 Pre-commit hooks are set to check the code added whenever you commit something.
 
-When you try to commit your code, hooks are automatically run, and if you code does not meet the quality required by linters, it will not be committed. You then have to fix your code and try to commit again !
-
-!!! important
+!!! info
     If you never ran the hooks before, install it with :
     ```bash
+    pip install -e .[hook]
     pre-commit install
     ```
 
-!!! info
+When you try to commit your code, hooks are automatically run, and if your code does not meet the quality required by linters, it will not be committed. You then have to fix your code and try to commit again !
+
+!!! tip
     You can manually run the pre-commit hooks with :
     ```bash
     pre-commit run --all-files
@@ -103,16 +104,23 @@ When you try to commit your code, hooks are automatically run, and if you code d
 
 When you contribute, you need to make sure all the unit-tests pass. You should also add tests if necessary !
 
+!!! info
+    Install the testing dependencies with :
+    ```bash
+    pip install -e .[test]
+    ```
+
 You can run the tests with :
 
 ```bash
 pytest
 ```
 
+---
+
 !!! info
     Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !
 
-!!! info
     Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !
 
 ### Documentation
@@ -124,3 +132,9 @@ You can visualize the documentation locally by running :
 ```bash
 mkdocs serve
 ```
+
+!!! info
+    Before running this, you need to install the documentation dependencies :
+    ```bash
+    pip install -e .[docs]
+    ```

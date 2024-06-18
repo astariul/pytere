@@ -7,7 +7,7 @@ Python Template repository
     <a href="https://github.com/astariul/pytere/releases"><img src="https://img.shields.io/github/release/astariul/pytere.svg" alt="GitHub release" /></a>
     <a href="https://github.com/astariul/pytere/actions/workflows/pytest.yaml"><img src="https://github.com/astariul/pytere/actions/workflows/pytest.yaml/badge.svg" alt="Test status" /></a>
     <a href="https://github.com/astariul/pytere/actions/workflows/lint.yaml"><img src="https://github.com/astariul/pytere/actions/workflows/lint.yaml/badge.svg" alt="Lint status" /></a>
-    <img src=".github/badges/coverage.svg" alt="Coverage status" />
+    <img src="https://gist.githubusercontent.com/astariul/f3c492434596e8f0ae0d5fad12966f64/raw/coverage.svg" alt="Coverage status" />
     <a href="https://astariul.github.io/pytere"><img src="https://img.shields.io/website?down_message=failing&label=docs&up_color=green&up_message=passing&url=https%3A%2F%2Fastariul.github.io%2Fpytere" alt="Docs" /></a>
     <br>
     <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="ruff" /></a>
@@ -36,7 +36,7 @@ It's just a template repository for python, with the following features :
 * 📚 Beautiful documentation with [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/), published as a Github page with [mike](https://github.com/jimporter/mike) automatically
 * ✨ Modern code style checks with [ruff](https://github.com/astral-sh/ruff)
 * 🅿️ Easy development with [pre-commit hooks](https://pre-commit.com/)
-* ✅ Tests with [pytest](https://docs.pytest.org/) and coverage without external tools
+* ✅ Tests with [pytest](https://docs.pytest.org/) and automatic coverage without external tools
 * :octocat: CI with [Github actions](https://github.com/features/actions)
 * 📝 Issues & PR templates
 * 🤖 Stale bot & Dependabot
@@ -153,8 +153,6 @@ pytest
 ---
 
 Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !
-
-Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !
 
 ### Documentation
 

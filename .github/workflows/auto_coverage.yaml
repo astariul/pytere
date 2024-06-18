@@ -1,0 +1,43 @@
+name: auto_coverage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  auto_coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.8"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[test]
+        pip install coverage-badge~=1.0
+      env:
+        GH_PAT: ${{ secrets.AUTH_TOKEN }}
+    - name: Test with pytest
+      timeout-minutes: 5
+      run: python -m pytest --cov-fail-under=0
+    - name: Generate the coverage badge & update the gist
+      run: |
+        export GIST_ID=$(cat README.md| grep coverage.svg | grep gist.githubusercontent.com | cut -d/ -f5)
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git clone https://${{ secrets.GIST_ACCESS_TOKEN }}@gist.github.com/$GIST_ID.git
+        coverage-badge -o $GIST_ID/coverage.svg -f
+        cd $GIST_ID
+        git add coverage.svg
+        if git diff --cached --exit-code --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update coverage badge"
+          git push
+        fi

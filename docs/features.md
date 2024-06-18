@@ -80,9 +80,8 @@ By default, the tests will fail if the test coverage is below **80%**.
     You can change the `pytest` configuration in `pyproject.toml`. You can also change the coverage threshold in the same file.
 
 !!! info
-    After running the unit-tests, you can update the coverage badge manually with `coverage-badge -o .github/badges/coverage.svg -f`.
-
-    Note that you don't need to do it by yourself, a pre-commit hook will take care of that (see [Pre-commit hooks](#pre-commit-hooks)).
+    The coverage badge is automatically updated whenever changes are pushed to the `main` branch.  
+    Check [Github actions](#continuous-deployment) for more details.
 
 ## Pre-commit hooks
 
@@ -94,7 +93,6 @@ Several pre-commit hooks are used in this template repository :
 * Ensure no large files are added
 * Lint code with `ruff`
 * Format code with `ruff`
-* Ensure the coverage badge is up-to-date
 
 !!! note "Where to modify it ?"
     You can modify the configuration for pre-commit hooks in the file `.pre-commit-config.yaml`.
@@ -117,13 +115,16 @@ Two Github actions are used for CI : one for the code format, and one for the un
 
 Continuous Deployment (_CD_) is here to automatically deploying whatever needs to be deployed. It avoids manual labor.
 
-Three Github actions are used for CD :
+Four Github actions are used for CD :
 
+* Running the tests and updating the coverage badge accordingly (_ran whenever a commit is pushed in the main branch_)
 * Deploying the latest documentation (_ran whenever a commit is pushed in the main branch_)
 * Deploying the documentation of stable versions (_ran whenever a release is published_)
 * Publishing the package to PyPi (_ran whenever a release is published_)
 
 !!! note "Where to modify it ?"
+    You can modify the Github action for updating the coverage badge in `.github/workflows/auto_coverage.yaml`.
+
     You can modify the Github action for latest documentation deployment in `.github/workflows/mike_dev.yaml`.
 
     You can modify the Github action for stable documentation deployment in `.github/workflows/mike_stable.yaml`.
@@ -140,6 +141,13 @@ Three Github actions are used for CD :
     ```
     error: failed to push branch gh-pages to origin: "remote: Permission denied to github-actions[bot]."
     ```
+
+!!! info "Important"
+    The github action `.github/workflows/auto_coverage.yaml` needs to have a repository secret `GIST_ACCESS_TOKEN` defined to work properly.
+
+    The github action `.github/workflows/auto_pypi.yaml` needs to have a repository secret `PIPY_API_TOKEN` defined to work properly.
+
+    See [Usage](usage.md) for more details.
 
 
 ### Others

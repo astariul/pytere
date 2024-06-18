@@ -3,7 +3,6 @@ repos:
     rev: "v4.6.0"
     hooks:
       - id: trailing-whitespace
-        exclude: "coverage.svg$"
         args: [--markdown-linebreak-ext=md]
       - id: end-of-file-fixer
         exclude: "coverage_report/.*"

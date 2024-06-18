@@ -36,7 +36,7 @@ It's just a template repository for python, with the following features :
 * 📚 Beautiful documentation with [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/), published as a Github page with [mike](https://github.com/jimporter/mike) automatically
 * ✨ Modern code style checks with [ruff](https://github.com/astral-sh/ruff)
 * 🅿️ Easy development with [pre-commit hooks](https://pre-commit.com/)
-* ✅ Tests with [pytest](https://docs.pytest.org/) and coverage without external tools
+* ✅ Tests with [pytest](https://docs.pytest.org/) and automatic coverage without external tools
 * :octocat: CI with [Github actions](https://github.com/features/actions)
 * 📝 Issues & PR templates
 * 🤖 Stale bot & Dependabot
@@ -153,8 +153,6 @@ pytest
 ---
 
 Tests are not included in the pre-commit hooks, because running the tests might be slow, and for the sake of developpers we want the pre-commit hooks to be fast !
-
-Pre-commit hooks will not run the tests, but it will automatically update the coverage badge !
 
 ### Documentation
 

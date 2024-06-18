@@ -452,6 +452,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-the-coverage-badge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the coverage badge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#enable-dependabot" class="md-nav__link">
     <span class="md-ellipsis">
       Enable Dependabot
@@ -677,6 +686,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-the-coverage-badge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the coverage badge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#enable-dependabot" class="md-nav__link">
     <span class="md-ellipsis">
       Enable Dependabot
@@ -769,6 +787,46 @@
 <h3 id="optionally">Optionally</h3>
 <p>Optionally, if there is some features you don't want (like the Github action that automatically release your code to PyPi), you can remove it !</p>
 <p>Head over to the <a href="../features/">Features</a> page to see which file to remove.</p>
+<h2 id="create-the-coverage-badge">Create the coverage badge</h2>
+<p>The coverage badge is hosted in a <a href="https://gist.github.com/astariul/f3c492434596e8f0ae0d5fad12966f64">Github Gist</a>.</p>
+<p>When you clone this template, you need to setup a new gist with your own coverage badge, associated with your newly created repository.</p>
+<p>You can do this by following these steps :</p>
+<ul>
+<li>Create a <a href="https://gist.github.com/">new Github Gist</a></li>
+<li>Name the file <code>coverage.svg</code>, and put the following content inside :</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;99&quot; height=&quot;20&quot;&gt;
+    &lt;linearGradient id=&quot;b&quot; x2=&quot;0&quot; y2=&quot;100%&quot;&gt;
+        &lt;stop offset=&quot;0&quot; stop-color=&quot;#bbb&quot; stop-opacity=&quot;.1&quot;/&gt;
+        &lt;stop offset=&quot;1&quot; stop-opacity=&quot;.1&quot;/&gt;
+    &lt;/linearGradient&gt;
+    &lt;mask id=&quot;a&quot;&gt;
+        &lt;rect width=&quot;99&quot; height=&quot;20&quot; rx=&quot;3&quot; fill=&quot;#fff&quot;/&gt;
+    &lt;/mask&gt;
+    &lt;g mask=&quot;url(#a)&quot;&gt;
+        &lt;path fill=&quot;#555&quot; d=&quot;M0 0h63v20H0z&quot;/&gt;
+        &lt;path fill=&quot;#a9a9a9&quot; d=&quot;M63 0h36v20H63z&quot;/&gt;
+        &lt;path fill=&quot;url(#b)&quot; d=&quot;M0 0h99v20H0z&quot;/&gt;
+    &lt;/g&gt;
+    &lt;g fill=&quot;#fff&quot; text-anchor=&quot;middle&quot; font-family=&quot;DejaVu Sans,Verdana,Geneva,sans-serif&quot; font-size=&quot;11&quot;&gt;
+        &lt;text x=&quot;31.5&quot; y=&quot;15&quot; fill=&quot;#010101&quot; fill-opacity=&quot;.3&quot;&gt;coverage&lt;/text&gt;
+        &lt;text x=&quot;31.5&quot; y=&quot;14&quot;&gt;coverage&lt;/text&gt;
+        &lt;text x=&quot;80&quot; y=&quot;15&quot; fill=&quot;#010101&quot; fill-opacity=&quot;.3&quot;&gt;? %&lt;/text&gt;
+        &lt;text x=&quot;80&quot; y=&quot;14&quot;&gt;? %&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+</code></pre></div>
+<ul>
+<li>Access the raw content of the file, at this URL : <code>https://gist.githubusercontent.com/&lt;username&gt;/&lt;gist_id&gt;/raw/coverage.svg</code><br />
+(You need to replace <code>&lt;username&gt;</code> and <code>&lt;gist_id&gt;</code> accordingly)</li>
+<li>Copy this URL, and put it in the README, replacing the URL of the existing coverage badge</li>
+<li>Go to <a href="https://github.com/settings/tokens">Github Personal Access Tokens</a>, and generate a new classic token</li>
+<li>In the scope of the token, give write access to <code>gist</code>, and remove the expiration date</li>
+<li>Copy your newly generated PAT token</li>
+<li>In your repository, create a <code>GIST_ACCESS_TOKEN</code> repository secret (go to your repository's <code>Settings</code>, then go to the <code>Secrets</code> section, and click the button <code>New repository secret</code>) and paste the PAT token as the value</li>
+</ul>
+<p>That's it ! Now whenever you push to your repository, a Github action is triggered and will automatically run the tests and update the coverage badge accordingly.</p>
 <h2 id="enable-dependabot">Enable Dependabot</h2>
 <p>From the Github website, on your repository page, you can enable <a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates#enabling-or-disabling-dependabot-security-updates-for-an-individual-repository">Dependabot</a> by going to the <code>Settings</code> tab of your repository, then in the <code>Security &amp; analysis</code> section you can enable <code>Dependabot alerts</code> and <code>Dependabot security updates</code>.</p>
 <h2 id="give-write-permissions-to-workflows">Give write permissions to workflows</h2>

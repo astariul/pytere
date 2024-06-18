@@ -757,8 +757,8 @@ ruff<span class="w"> </span>format<span class="w"> </span>.
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>After running the unit-tests, you can update the coverage badge manually with <code>coverage-badge -o .github/badges/coverage.svg -f</code>.</p>
-<p>Note that you don't need to do it by yourself, a pre-commit hook will take care of that (see <a href="#pre-commit-hooks">Pre-commit hooks</a>).</p>
+<p>The coverage badge is automatically updated whenever changes are pushed to the <code>main</code> branch.<br />
+Check <a href="#continuous-deployment">Github actions</a> for more details.</p>
 </div>
 <h2 id="pre-commit-hooks">Pre-commit hooks</h2>
 <p>Several pre-commit hooks are used in this template repository :</p>
@@ -769,7 +769,6 @@ ruff<span class="w"> </span>format<span class="w"> </span>.
 <li>Ensure no large files are added</li>
 <li>Lint code with <code>ruff</code></li>
 <li>Format code with <code>ruff</code></li>
-<li>Ensure the coverage badge is up-to-date</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Where to modify it ?</p>
@@ -786,14 +785,16 @@ ruff<span class="w"> </span>format<span class="w"> </span>.
 </div>
 <h3 id="continuous-deployment">Continuous Deployment</h3>
 <p>Continuous Deployment (<em>CD</em>) is here to automatically deploying whatever needs to be deployed. It avoids manual labor.</p>
-<p>Three Github actions are used for CD :</p>
+<p>Four Github actions are used for CD :</p>
 <ul>
+<li>Running the tests and updating the coverage badge accordingly (<em>ran whenever a commit is pushed in the main branch</em>)</li>
 <li>Deploying the latest documentation (<em>ran whenever a commit is pushed in the main branch</em>)</li>
 <li>Deploying the documentation of stable versions (<em>ran whenever a release is published</em>)</li>
 <li>Publishing the package to PyPi (<em>ran whenever a release is published</em>)</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Where to modify it ?</p>
+<p>You can modify the Github action for updating the coverage badge in <code>.github/workflows/auto_coverage.yaml</code>.</p>
 <p>You can modify the Github action for latest documentation deployment in <code>.github/workflows/mike_dev.yaml</code>.</p>
 <p>You can modify the Github action for stable documentation deployment in <code>.github/workflows/mike_stable.yaml</code>.</p>
 <p>You can modify the Github action for package publishing to PyPi in <code>.github/workflows/auto_pypi.yaml</code>.</p>
@@ -805,6 +806,12 @@ ruff<span class="w"> </span>format<span class="w"> </span>.
 <p>If you don't select "Read &amp; write permissions", the github actions publishing the documentation will fail with the following error :</p>
 <div class="highlight"><pre><span></span><code>error: failed to push branch gh-pages to origin: &quot;remote: Permission denied to github-actions[bot].&quot;
 </code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Important</p>
+<p>The github action <code>.github/workflows/auto_coverage.yaml</code> needs to have a repository secret <code>GIST_ACCESS_TOKEN</code> defined to work properly.</p>
+<p>The github action <code>.github/workflows/auto_pypi.yaml</code> needs to have a repository secret <code>PIPY_API_TOKEN</code> defined to work properly.</p>
+<p>See <a href="../usage/">Usage</a> for more details.</p>
 </div>
 <h3 id="others">Others</h3>
 <p>There is one more Github action, which takes care of labeling and closing any stale issue or PR.</p>

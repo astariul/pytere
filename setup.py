@@ -26,7 +26,7 @@ reqs = []
 
 extras_require = {
     "test": ["pytest~=8.0", "pytest-cov~=5.0"],
-    "hook": ["pre-commit~=3.0"],
+    "hook": ["pre-commit>=3,<5"],
     "lint": ["ruff~=0.2"],
     "docs": ["mkdocs-material~=9.0", "mkdocstrings[python]~=0.24", "mike~=2.0"],
 }

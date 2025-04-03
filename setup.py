@@ -25,7 +25,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 reqs = []
 
 extras_require = {
-    "test": ["pytest~=8.0", "pytest-cov>=5,<7"],
+    "test": ["pytest~=8.0", "pytest-cov~=6"],
     "hook": ["pre-commit~=4.0"],
     "lint": ["ruff~=0.2"],
     "docs": ["mkdocs-material~=9.0", "mkdocstrings[python]~=0.24", "mike~=2.0"],
